@@ -1,5 +1,5 @@
 html {
-  background-color: black;
+
   color: white;
   font-family: Helvetica;
   font-size: 18px;
@@ -11,6 +11,13 @@ body {
 .flex-container {
   display: flex;
   align-items: center;
+  flex-direction: row;
+}
+
+.container {
+  width: 960px;
+  margin: auto auto;
+  justify-content: flex-start;
 }
 
 .uppercase {
@@ -18,13 +25,16 @@ body {
 }
 
 /*       HEADER     */
-
+.header-div {
+  background-color: black;
+}
 .header {
   height: auto;
   width: 960px;
-  align-content: center;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
+  background-color: black;
 }
 .header img {
   margin-left: 0.5rem;
@@ -45,18 +55,19 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 25rem;
-  width: 100%
+  width: 100%;
 }
 
 .splash {
   background-color: black;
   display: block;
   margin-top: 9rem;
-  margin-left: 8rem;
+  margin-left: 0rem;
   height: auto;
   width: 20rem;
-  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
+
 }
 
 .headline,
@@ -64,18 +75,21 @@ body {
   display: block;
   align-items: center;
   margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 
 .headline {
   font-size: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 0.25rem;
+  padding-top: 2rem;
+  padding-bottom: 0.25rem;
   font-weight: bold;
 }
 
 .announcement {
   font-size: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 2rem;
   font-weight: bold;
 }
 
@@ -83,6 +97,84 @@ body {
 .nav {
   height: 20%;
   width: 100%;
-  background-color: red;
+  background-color: firebrick;
+  align-items: center;
+  align-content: space-around;
+}
 
+.nav .container {
+  justify-content: space-between;
+}
+
+.nav-item {
+  display: inline-block;
+  font-size: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/*         STORE         */
+
+.products {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.product {
+  width: 30%;
+  display: block;
+}
+
+.product-img {
+  border: 4px solid black;
+  padding: 2rem 0;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product img {
+  max-width: 8rem;
+}
+
+.caption {
+  color: white;
+  background-color: black;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/*       LOCATION AND HOURS       */
+.info {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.business-info {
+  width: 35%;
+}
+.info-title {
+  background-color: black;
+  padding: 1rem 2rem;
+  display: block;
+
+}
+
+.operating-info {
+  display: block;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: black;
+  font-size: 1rem;
+}
+
+
+/*           FOOTER              */
+footer {
+  margin-top: 4rem;
+  background-color: black;
+  height: 5rem;
+  display: flex;
+  align-items: center;
 }
